@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "watch-sass": "sass -w src/css/style.scss src/css/style.css"
+  },
+  "dependencies": {
+    "sass": "^1.89.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-contrib-concat": "^2.1.0"
+  }
+}

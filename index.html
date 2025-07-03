@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Webpage</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <!-- Orientation Lock Overlay -->
+    <div class="orientation-overlay" id="orientationOverlay">
+        <div class="orientation-message">
+            <div class="orientation-icon">📱</div>
+            <h2>Please rotate your device</h2>
+        </div>
+    </div>
+
+    <div class="app-container" id="appContainer">
+        <!-- Scene 1: Intro -->
+        <div class="scene intro-scene active" id="introScene">
+            <div class="headline"></div>
+            <div class="loading-bar">
+                <div class="loading-progress" id="loadingProgress"></div>
+            </div>
+            <p class="loading-text">Loading amazing experience...</p>
+        </div>
+
+        <!-- Scene 2: Gallery -->
+        <div class="scene gallery-scene" id="galleryScene">
+            <div class="gallery-container">
+                <div class="swiper" id="productSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-slide="1">
+                            <img src="assets/shoe1.png" alt="shoe1">
+                        </div>
+                        <div class="swiper-slide" data-slide="2">
+                            <img src="assets/shoe2.png" alt="shoe2">
+                        </div>
+                        <div class="swiper-slide" data-slide="3">
+                            <img src="assets/shoe3.png" alt="shoe3">
+                        </div>
+                        <div class="swiper-slide" data-slide="4">
+                            <img src="assets/shoe4.png" alt="shoe4">
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+                
+                <button class="cta-button" id="ctaButton"></button>
+            </div>
+        </div>
+
+        <!-- Scene 3: Video -->
+        <div class="scene video-scene" id="videoScene">
+            <button class="back-button" id="backButton">←</button>
+            <div class="video-container" id="videoContainer">
+                <video id="productVideo" loop muted autoplay playsinline>
+                    <source src="assets/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-placeholder" id="videoPlaceholder" style="display: none;">
+                    Video Player<br>(Sample video loading...)
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/js/bundle.js"></script>
+</body>
+</html>
